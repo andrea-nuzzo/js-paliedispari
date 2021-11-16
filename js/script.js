@@ -2,6 +2,26 @@
 Chiedere all’utente di inserire una parola 
 Creare una funzione per capire se la parola inserita è palindroma*/
 
+let word = 'ingegni';
+let notPal = 'ciao';
+
+function palindrome(word){
+    
+    let array = word.split('');
+    array.reverse();
+
+    let testPalindrome = '';
+
+    for(let i = 0; i < array.length; i++){
+        testPalindrome += array[i];
+    }
+    
+    if(testPalindrome == word){
+        return true;
+    }
+    return false;
+}
+
 
 /*PARI E DISPARI
  L’utente sceglie pari o dispari e inserisce un numero da 1 a 5. 
