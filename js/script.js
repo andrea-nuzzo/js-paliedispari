@@ -2,10 +2,28 @@
 Chiedere all’utente di inserire una parola 
 Creare una funzione per capire se la parola inserita è palindroma*/
 
-let word = 'ingegni';
-let notPal = 'ciao';
 
-function palindrome(word){
+
+// function palindrome(word){
+    
+//     let array = word.split('');
+//     array.reverse();
+
+//     let testPalindrome = '';
+
+//     for(let i = 0; i < array.length; i++){
+//         testPalindrome += array[i];
+//     }
+    
+//     if(testPalindrome == word){
+//         return true;
+//     }
+//     return false;
+// }
+
+let btnPalindrome = document.getElementById('palindrome');
+btnPalindrome.addEventListener('click', function(){
+    let word = prompt('Iserisci una parola');
     
     let array = word.split('');
     array.reverse();
@@ -17,10 +35,14 @@ function palindrome(word){
     }
     
     if(testPalindrome == word){
-        return true;
+       alert(`La parola "${word}" è palindroma`)
+    } else{
+        alert(`La parola "${word}" non è palindroma`)
     }
-    return false;
-}
+
+});
+
+
 
 
 /*PARI E DISPARI
